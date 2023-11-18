@@ -8,7 +8,13 @@ namespace SingletonPattern
         private int _killCount = 0;
         private static readonly object _lock = new object();
 
-        private ThreadSafeChuckyKills() { }
+        static ThreadSafeChuckyKills() 
+        { 
+        }
+
+        private ThreadSafeChuckyKills() 
+        { 
+        }
 
         public static ThreadSafeChuckyKills Instance
         {
