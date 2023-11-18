@@ -7,7 +7,7 @@ namespace SingletonPatternExample
     {
         static void Main(string[] args)
         {
-            ChuckyKills chucky = ChuckyKills.Instance;
+            ThreadSafeChuckyKills chucky = ThreadSafeChuckyKills.Instance;
             chucky.AddKill();
             chucky.AddKill();
             chucky.AddKill();
@@ -17,7 +17,7 @@ namespace SingletonPatternExample
             Console.WriteLine("Total kills: " + chucky.TotalKills);
 
             
-            ChuckyKills anotherChucky = ChuckyKills.Instance;
+            ThreadSafeChuckyKills anotherChucky = ThreadSafeChuckyKills.Instance;
             anotherChucky.AddKill();
 
             Console.WriteLine("Total kills: " + chucky.TotalKills);
